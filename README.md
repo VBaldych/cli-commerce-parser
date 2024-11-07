@@ -13,7 +13,7 @@ Async data process based on Queues feat. RabbitMQ.
 
 The build is based on Docker, so you should have it on your local machine - https://docs.docker.com/compose/install/
 
-If you use Windows, it's better to (install WSL)[https://documentation.ubuntu.com/wsl/en/latest/guides/install-ubuntu-wsl2/]
+If you use Windows, it's better to [install WSL](https://documentation.ubuntu.com/wsl/en/latest/guides/install-ubuntu-wsl2/)
 
 ### Clone the repository
 
