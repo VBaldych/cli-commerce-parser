@@ -1,4 +1,4 @@
-# Commerce Parser CLI
+# CLI Commerce Parser
 
 This is Symfony application for parsing products from Rozetka shop.
 
@@ -46,7 +46,7 @@ For this action you should go into PHP container and run Symfony commands:
 Go to `app/files/products.csv` and check parsed data
 
 ### Check data in API
-Just go to page [http://127.0.0.1:8080/api/products](http://127.0.0.1:8080/api/products).
+Just go to page [http://127.0.0.1:8080/api/products](http://127.0.0.1:8080/api/products)
 
 ### Run Unit tests
 
