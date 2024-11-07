@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Queue;
 
 use App\DTO\ProductDTO;
-use App\Service\Storage\CsvFileService;
+use App\Service\Csv\CsvFileService;
 use Psr\Log\LoggerInterface;
 
 class CsvWorker

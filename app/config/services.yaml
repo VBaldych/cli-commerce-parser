@@ -36,6 +36,6 @@ services:
             $shops:
                 Rozetka: '@App\Service\Parser\RozetkaParser'
 
-    App\Service\Storage\CsvFileService:
+    App\Service\Csv\CsvFileService:
         arguments:
             $filePath: '%kernel.project_dir%/files/products.csv'
