@@ -3,6 +3,7 @@
 This is Symfony application for parsing products from Rozetka shop.
 
 As a parser XPath component I use [Symfony DOM Crawler](https://symfony.com/doc/current/components/dom_crawler.html)
+
 For building API endpoint I use [API Platform](https://symfony.com/doc/6.4/the-fast-track/en/26-api.html)
 
 Async data process based on Queues feat. RabbitMQ.
