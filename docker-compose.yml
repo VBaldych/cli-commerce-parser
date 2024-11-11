@@ -37,14 +37,16 @@ services:
     networks:
       - cli-commerce-parser
 
-  database:
+  mysql:
     image: mysql:8.0
     container_name: mysql
+    hostname: mysql
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: main
     ports:
-      - "3308:3306"
+      - "3306:3306"
     volumes:
       - ./docker/mysql_data:/var/lib/mysql
     networks:
@@ -58,4 +60,4 @@ services:
       - cli-commerce-parser
 
 volumes:
-  database_data:
+  mysql_data:
