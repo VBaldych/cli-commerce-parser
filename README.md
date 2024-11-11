@@ -46,15 +46,6 @@ For this action you should go into PHP container and run following commands:
 2. Run queue worker - `php bin/console messenger:consume async`
 3. In other CLI tab, run  `make php-cli`, then run parsing & getting data - `php bin/console app:pp`
 
-### Check queued messages
-For this action you should run command
-
-```bash
-php bin/console messenger:stats
-```
-
-Also, you can check it in Rabbit MQ - go to `http://127.0.0.1:15672/#/queues` and check charts
-
 ### Check data in CSV
 Go to `app/files/products.csv` and check parsed data
 
