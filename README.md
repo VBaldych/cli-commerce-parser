@@ -23,7 +23,7 @@ If you use Windows, it's better to [install WSL](https://documentation.ubuntu.co
 In the command line, run the following commands
 ```bash
 git clone https://github.com/VBaldych/commerce-parser-cli.git
-cd commerce-parser-cli
+cd cli-commerce-parser
 ```
 
 ### Run local build
