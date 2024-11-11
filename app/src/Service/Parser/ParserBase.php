@@ -6,7 +6,6 @@ namespace App\Service\Parser;
 
 use App\DTO\ProductDTO;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\HtmlSanitizer\HtmlSanitizerInterface;
 use Symfony\Component\HttpClient\HttpClient;
 
 abstract class ParserBase implements ParserInterface
@@ -15,7 +14,6 @@ abstract class ParserBase implements ParserInterface
 
     public function __construct(
         protected LoggerInterface $logger,
-        protected HtmlSanitizerInterface $htmlSanitizer
     ) { }
 
     public function getHtml(string $url): ?string

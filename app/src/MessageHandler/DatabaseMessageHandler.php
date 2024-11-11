@@ -22,6 +22,7 @@ class DatabaseMessageHandler
         $product = $message->getProduct();
 
         try {
+            // Process product to DB.
             $this->databaseWorker->process($product);
         } catch (\Exception $exception) {
             $this->logger->error("Failed to process product message: " . $exception->getMessage());
