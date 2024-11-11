@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 
 class ProductRepositoryTest extends TestCase
 {
-    public function testSaveOrUpdateProduct()
+    public function testSaveOrUpdateProduct(): void
     {
         $productDTO = new ProductDTO('Product1', 100.0, 'url1', 'url2');
 

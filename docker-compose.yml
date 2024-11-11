@@ -1,6 +1,6 @@
 networks:
-  commerce-parser-cli:
-    name: commerce-parser-cli
+  cli-commerce-parser:
+    name: cli-commerce-parser
 
 services:
   nginx:
@@ -17,7 +17,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:
-      - commerce-parser-cli
+      - cli-commerce-parser
 
   php:
     build:
@@ -35,7 +35,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:
-      - commerce-parser-cli
+      - cli-commerce-parser
 
   database:
     image: mysql:8.0
@@ -48,14 +48,14 @@ services:
     volumes:
       - ./docker/mysql_data:/var/lib/mysql
     networks:
-      - commerce-parser-cli
+      - cli-commerce-parser
 
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
     ports: [5672, 15672]
     networks:
-      - commerce-parser-cli
+      - cli-commerce-parser
 
 volumes:
   database_data:

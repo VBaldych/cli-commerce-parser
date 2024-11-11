@@ -26,15 +26,15 @@ services:
     App\Command\ParseProductsCommand:
         arguments:
             $urls: [
-                'https://rozetka.com.ua/notebooks/c80004/producer=lenovo/',
-                'https://rozetka.com.ua/notebooks/c80004/producer=acer/',
-                'https://rozetka.com.ua/mobile-phones/c80003/'
+                'https://www.moyo.ua/ua/telecommunication/smart/',
+                'https://www.moyo.ua/ua/foto_video/tv_audio/screen/',
+                'https://www.moyo.ua/ua/bt/mbt/robot_pyle_i_chist/'
             ]
 
     App\Service\Factory\ParserFactory:
         arguments:
             $shops:
-                Rozetka: '@App\Service\Parser\RozetkaParser'
+                Moyo: '@App\Service\Parser\MoyoParser'
 
     App\Service\Csv\CsvFileService:
         arguments:

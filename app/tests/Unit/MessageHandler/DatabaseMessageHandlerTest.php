@@ -13,7 +13,7 @@ use App\DTO\ProductDTO;
 
 class DatabaseMessageHandlerTest extends TestCase
 {
-    public function testInvoke()
+    public function testInvoke(): void
     {
         $databaseWorkerMock = $this->createMock(DatabaseWorker::class);
         $loggerMock = $this->createMock(LoggerInterface::class);

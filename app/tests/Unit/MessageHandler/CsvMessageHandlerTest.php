@@ -13,7 +13,7 @@ use App\DTO\ProductDTO;
 
 class CsvMessageHandlerTest extends TestCase
 {
-    public function testInvoke()
+    public function testInvoke(): void
     {
         $csvWorkerMock = $this->createMock(CsvWorker::class);
         $loggerMock = $this->createMock(LoggerInterface::class);

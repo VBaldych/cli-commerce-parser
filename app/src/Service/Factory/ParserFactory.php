@@ -7,8 +7,8 @@ namespace App\Service\Factory;
 use App\Service\Parser\ParserInterface;
 
 /*
- * Actually, we no need a factory for this task.
- * But it's a good practise for future scalability.
+ * Actually, we don't need a factory for this task.
+ * But, it's a good practise for future scalability.
  */
 final readonly class ParserFactory
 {

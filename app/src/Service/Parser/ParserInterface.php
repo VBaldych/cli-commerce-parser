@@ -8,4 +8,6 @@ interface ParserInterface
 {
 
     public function getHtml(string $url);
+
+    public function parse(string $url): array;
 }

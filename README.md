@@ -1,12 +1,14 @@
 # CLI Commerce Parser
 
-This is Symfony application for parsing products from Rozetka shop.
+This is Symfony application for parsing products from online shop.
 
-As a parser XPath component I use [Symfony DOM Crawler](https://symfony.com/doc/current/components/dom_crawler.html)
+As a shop for parsing I have chosen 'Moyo'.
+
+As a XPath parser component I use [Symfony DOM Crawler](https://symfony.com/doc/current/components/dom_crawler.html)
 
 For building API endpoint I use [API Platform](https://symfony.com/doc/6.4/the-fast-track/en/26-api.html)
 
-Async data process based on Queues feat. RabbitMQ.
+Async data process based on queues feat. RabbitMQ.
 
 ## Installation
 
@@ -38,10 +40,11 @@ make start
 ```
 ### Make first parsing
 
-For this action you should go into PHP container and run Symfony commands:
+For this action you should go into PHP container and run following commands:
 
-1. Run queue worker - `make php-cli php bin/console messenger:consume async`
-2. Run parsing & getting data - `make php-cli php bin/console app:pp`
+1. Go into PHP container - `make php-cli`
+1. Run queue worker - `php bin/console messenger:consume async`
+2. Run parsing & getting data - `php bin/console app:pp`
 
 ### Check data in CSV
 Go to `app/files/products.csv` and check parsed data
@@ -53,7 +56,7 @@ Just go to page [http://127.0.0.1:8080/api/products](http://127.0.0.1:8080/api/p
 
 Run the command:
 ```bash
-make php-cli php bin/phpunit
+php bin/phpunit
 ```
 
 ## Code analysis
@@ -62,7 +65,7 @@ You can take a look I use great tool Rector for code analysis. It helps to keep 
 For analyzing code with Rector, run it inside PHP container
 
 ```bash
-make php-cli vendor/bin/rector process --dry-run
+vendor/bin/rector process --dry-run
 ```
 ## How we can improve application
-- Use [Batches](https://symfony.com/doc/current/messenger.html#process-messages-by-batches) for process queues by chunks 
+- Use [Batches](https://symfony.com/doc/current/messenger.html#process-messages-by-batches) for process queues by chunks

@@ -25,7 +25,7 @@ class ProductRepository extends ServiceEntityRepository
     public function saveOrUpdateProduct(ProductDTO $productDTO): void
     {
         try {
-            $product = $this->findOneBy(['productUrl' => $productDTO->productUrl]) ?? new Product();
+            $product = $this->findOneBy(['product_url' => $productDTO->productUrl]) ?? new Product();
 
             $product
                 ->setName($productDTO->name)

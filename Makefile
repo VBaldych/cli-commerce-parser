@@ -13,7 +13,7 @@ start:
 down:
 	@$(DC_CMD) down
 php-cli:
-	@$(DC_CMD) exec php bash $(filter-out $@,$(MAKECMDGOALS))
+	@$(DC_CMD) exec php bash
 
 # Composer Command with Arguments
 composer:

@@ -27,7 +27,7 @@ class CsvFileService
     public function saveProduct(ProductDTO $product): void
     {
         if ($this->isProductInCsv($product->productUrl)) {
-            $this->logger->info("Product with URL {$product->productUrl} already exists in CSV.");
+            $this->logger->info(sprintf('Product with URL %s already exists in CSV.', $product->productUrl));
             return;
         }
 
